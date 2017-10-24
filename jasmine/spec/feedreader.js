@@ -35,7 +35,7 @@ $(function() {
            for (var i = 0; i < allFeeds.length; i++) {
              expect(allFeeds[i].url).toBeDefined();
              expect(allFeeds[i].url.length).not.toBe(0);
-           };
+           }
          });
 
         /* TODO: Write a test that loops through each feed
@@ -47,7 +47,7 @@ $(function() {
            for (var i = 0; i < allFeeds.length; i++) {
              expect(allFeeds[i].name).toBeDefined();
              expect(allFeeds[i].name.length).not.toBe(0);
-           };
+           }
          });
     });
 
@@ -74,7 +74,7 @@ $(function() {
           */
 
           it('menu state changes on click', function() {
-              var menu = $('.menu-icon-link')
+              var menu = $('.menu-icon-link');
               menu.click();
               expect($('body').hasClass('menu-hidden')).toBe(false);
               menu.click();
