@@ -54,7 +54,7 @@ $(function() {
                 loadFeed(0, done);
               });
 
-              it('loadFeed is called', function() {
+              it('has initial content', function() {
                 expect($('.feed .entry').length).not.toBe(0);
               });
 
@@ -71,7 +71,7 @@ $(function() {
                   }));
               });
 
-              it('has new content', function() {
+              it('has new feed content', function() {
                   entry2 = $(".entry").html();
                   expect(entry2).not.toBe(entry1);
               });
