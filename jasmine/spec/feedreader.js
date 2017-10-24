@@ -66,22 +66,18 @@ $(function() {
     var entry2;
 
     beforeEach(function(done) {
-      entry1 = $(".entry").html();
       loadFeed(1, (function() {
         done();
-        console.log('Entry1: ' + entry1);
+        entry1 = $(".entry").html();
       }));
-      console.log('Load feed 1 finished!');
     });
 
     it('has new feed content', function(done) {
-      entry2 = $(".entry").html();
       loadFeed(2, (function() {
+        entry2 = $(".entry").html();
+        expect(entry2).not.toBe(entry1);
         done();
-        console.log('Entry2: ' + entry2);
-        }));
-      console.log('Load feed 2 finished!');
-      expect(entry2).not.toBe(entry1);
+      }));
       });
     });
 
